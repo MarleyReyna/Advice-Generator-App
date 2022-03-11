@@ -1,0 +1,77 @@
+$highlight-color: #53ffaa;
+$text-color: #cee3e9;
+$background: #313a48;
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 3rem 0;
+  box-shadow: 30px 50px 80px rgba(0, 0, 0, 0.100202);
+  border-radius: 15px;
+  background-color: $background;
+
+  h1 {
+    font-size: clamp(11px, 0.90278vw, 13px);
+    line-height: 18px;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: 4.08571px;
+    text-transform: uppercase;
+    color: $highlight-color;
+  }
+
+  p {
+    font-size: clamp(24px, 1.944444vw, 28px);
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: -0.3px;
+    max-width: 27.75rem;
+    margin: 1.5rem 0 2.5rem;
+    color: $text-color;
+  }
+
+  .pattern-divider {
+    width: 100%;
+    max-width: 27.75rem;
+    height: 1rem;
+    background-image: url("./Images/pattern-divider-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 0.5rem;
+  }
+
+  button {
+    padding: 1.25rem 1.25rem 17px 1.25rem;
+    border: none;
+    border-radius: 50%;
+    background: $highlight-color;
+    height: fit-content;
+    transform: translateY(2rem);
+    transition: all 300ms ease;
+  }
+
+  button:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 40px #53ffaa;
+  }
+}
+
+@media only screen and(max-width: 23.4375rem) {
+  main {
+    padding: 2.5rem 1.5rem 0;
+
+    h1 {
+      line-height: 15px;
+    }
+
+    p {
+      line-height: 33px;
+      margin-bottom: 1.5rem;
+    }
+
+    .pattern-divider {
+      margin-bottom: 0;
+    }
+  }
+}
